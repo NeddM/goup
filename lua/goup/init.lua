@@ -41,7 +41,7 @@ M.git_push = function()
   end
 end
 
-M.main = function(...)
+M.main = function()
   M.git_status()
   M.git_add()
   M.git_commit()
@@ -49,7 +49,7 @@ M.main = function(...)
 end
 
 M.setup = function()
-  vim.api.nvim_command("command! -nargs=* Goup lua require('goup').main(<f-args>)")
+  vim.api.nvim_command("command! -nargs=* Goup lua require('goup').main()")
 end
 
 return M
